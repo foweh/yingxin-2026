@@ -158,6 +158,88 @@
     line-height:1.55;
   }
 
+  /* ===== 易班官方账号 ===== */
+  .yb-band{
+    max-width:1080px;
+    margin:0 auto;
+    padding:26px 6vw 0;
+  }
+  .yb-band-inner{
+    position:relative;
+    background:linear-gradient(120deg,var(--green-800),var(--green-600) 62%,var(--green-500));
+    border-radius:18px;
+    padding:24px 28px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+    box-shadow:0 16px 34px -18px rgba(20,56,42,.5);
+    overflow:hidden;
+  }
+  .yb-band-inner::before{
+    content:"";
+    position:absolute;right:-60px;top:-60px;
+    width:190px;height:190px;border-radius:50%;
+    background:rgba(255,255,255,.08);
+  }
+  .yb-band-inner::after{
+    content:"";
+    position:absolute;right:40px;bottom:-95px;
+    width:170px;height:170px;border-radius:50%;
+    background:rgba(255,255,255,.06);
+  }
+  .yb-title{position:relative;z-index:1;min-width:230px;}
+  .yb-badge{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:.18em;
+    background:var(--orange);
+    color:#fff;
+    padding:4px 12px;
+    border-radius:999px;
+    margin-bottom:10px;
+    font-weight:700;
+  }
+  .yb-title h3{
+    font-family:var(--serif);
+    font-size:20px;
+    font-weight:900;
+    margin-bottom:4px;
+    letter-spacing:.02em;
+  }
+  .yb-title p{font-size:13px;color:#D8E9DF;}
+  .yb-links{
+    position:relative;z-index:1;
+    display:flex;gap:12px;flex-wrap:wrap;flex:1;min-width:280px;
+  }
+  .yb-link{
+    flex:1 1 150px;
+    display:flex;align-items:center;gap:12px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:14px;
+    padding:12px 16px;
+    color:#fff;
+    text-decoration:none;
+    transition:transform .18s, background .18s;
+  }
+  .yb-link:hover{background:rgba(255,255,255,.24);transform:translateY(-2px);}
+  .yb-ico{
+    flex:0 0 auto;
+    width:42px;height:42px;
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+    background:rgba(0,0,0,.2);
+  }
+  .yb-link b{display:block;font-size:15px;font-weight:700;line-height:1.3;}
+  .yb-link small{display:block;font-size:12px;color:#D8E9DF;margin-top:2px;}
+  @media (max-width:620px){
+    .yb-title{min-width:0;}
+    .yb-link{flex:1 1 100%;}
+  }
+
   /* ===== 主体布局 ===== */
   .main{
     max-width:1080px;
@@ -508,6 +590,31 @@
     </div>
   </div>
 </div>
+
+<!-- ===== 易班官方账号 ===== -->
+<section class="yb-band">
+  <div class="yb-band-inner">
+    <div class="yb-title">
+      <span class="yb-badge">关注我们</span>
+      <h3>校易班官方账号</h3>
+      <p>运动会、校园资讯、迎新动态，第一时间同步~</p>
+    </div>
+    <div class="yb-links">
+      <a class="yb-link" href="https://v.douyin.com/iNgojt0GVT4/" target="_blank" rel="noopener">
+        <span class="yb-ico">🎬</span>
+        <span><b>抖音</b><small>第十五届田径运动会开幕式</small></span>
+      </a>
+      <a class="yb-link" href="https://mp.weixin.qq.com/s/UGM9x0-TFGFKhjK94f2Qxg" target="_blank" rel="noopener">
+        <span class="yb-ico">💬</span>
+        <span><b>微信公众号</b><small>运动会推文 · 点击阅读</small></span>
+      </a>
+      <a class="yb-link" href="https://weixin.qq.com/sph/Ak8cxyYJ7l" target="_blank" rel="noopener">
+        <span class="yb-ico">▶️</span>
+        <span><b>微信视频号</b><small>运动会视频 · 点击观看</small></span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ===== 分类导航 ===== -->
 <nav class="cat-nav" id="catNav">
