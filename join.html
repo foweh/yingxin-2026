@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>校易班部门招新 · 加入我们</title>
+<meta name="description" content="校易班学生工作站纳新啦！发展运营部、多媒体工作室、传媒编导部、活动策划部、采编宣传部、文化设计部、主持播音部、秘书处 8 个部门等你加入~">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+  :root{
+    --green-900:#14382A;
+    --green-800:#1B4A38;
+    --green-700:#1F5A41;
+    --green-600:#2F7D5B;
+    --green-500:#3E946F;
+    --green-300:#BFD9CB;
+    --green-100:#E4F0E9;
+    --green-050:#F1F7F3;
+    --cream:#F7F5EE;
+    --ink:#24322B;
+    --muted:#6B7A72;
+    --line:#E3E7E1;
+    --orange:#E08A2E;
+    --orange-050:#FBF1E2;
+    --card:#FFFFFF;
+    --serif:"Noto Serif SC", "Songti SC", "SimSun", serif;
+    --sans:"Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--green-600);color:#fff;}
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-track{background:var(--cream);}
+  ::-webkit-scrollbar-thumb{background:var(--green-500);border-radius:5px;}
+
+  /* ===== 顶部横幅 ===== */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    color:#F4FAF6;
+    padding:100px 6vw 78px;
+    background:linear-gradient(135deg,#14382A,#1B4A38,#2F7D5B,#1F5A41);
+    background-size:300% 300%;
+    animation:heroShift 16s ease-in-out infinite;
+  }
+  @keyframes heroShift{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+  .blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(50px);
+    pointer-events:none;
+    will-change:transform;
+  }
+  .blob-1{width:300px;height:300px;background:rgba(62,148,111,.35);top:-90px;right:-70px;animation:float 11s ease-in-out infinite;}
+  .blob-2{width:230px;height:230px;background:rgba(224,138,46,.22);bottom:-80px;left:-50px;animation:float 14s ease-in-out infinite reverse;}
+  .blob-3{width:170px;height:170px;background:rgba(255,255,255,.09);top:32%;left:16%;animation:float 9s ease-in-out infinite;}
+  @keyframes float{
+    0%,100%{transform:translate(0,0) scale(1);}
+    33%{transform:translate(26px,-20px) scale(1.07);}
+    66%{transform:translate(-20px,16px) scale(.96);}
+  }
+  .hero-inner{position:relative;z-index:1;}
+  .hero .kicker{
+    display:inline-block;
+    letter-spacing:.2em;
+    font-size:13px;
+    color:#D6EFE1;
+    text-transform:uppercase;
+    margin-bottom:16px;
+    padding:6px 16px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:900;
+    font-size:clamp(32px,5vw,54px);
+    letter-spacing:.02em;
+    margin-bottom:14px;
+    background:linear-gradient(100deg,#FFFFFF 30%,#F2CE8C 46%,#FFFFFF 62%);
+    background-size:220% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:shine 7s linear infinite;
+  }
+  @keyframes shine{to{background-position:220% center;}}
+  .hero p.sub{
+    max-width:640px;
+    margin:0 auto;
+    color:#E7F2EC;
+    font-size:15.5px;
+    font-weight:300;
+    line-height:1.8;
+  }
+  .hero .ctas{margin-top:30px;}
+  .hero-cta{
+    display:inline-block;
+    margin:6px;
+    padding:13px 34px;
+    border-radius:999px;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-decoration:none;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .hero-cta.primary{
+    background:linear-gradient(120deg,var(--orange),#F0A34F);
+    color:#fff;
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 10px 30px -8px rgba(224,138,46,.8);}
+    50%{box-shadow:0 10px 44px -4px rgba(224,138,46,.98);}
+  }
+  .hero-cta.primary:hover{transform:translateY(-3px) scale(1.03);}
+  .hero-cta.ghost{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.35);
+    color:#E7F2EC;
+  }
+  .hero-cta.ghost:hover{background:rgba(255,255,255,.2);}
+
+  /* ===== 主体 ===== */
+  main{
+    max-width:860px;
+    margin:0 auto;
+    padding:44px 6vw 80px;
+  }
+  .sec-head{margin-bottom:20px;}
+  .sec-head h2{
+    font-family:var(--serif);
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:.01em;
+    background:linear-gradient(120deg,var(--green-900),var(--green-500));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .sec-head p{
+    color:var(--muted);
+    font-size:14.5px;
+    margin-top:6px;
+  }
+
+  /* ===== 关于易班 ===== */
+  .about{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:24px 26px;
+    margin-bottom:34px;
+    box-shadow:0 14px 30px -22px rgba(20,56,42,.3);
+  }
+  .about h3{
+    font-family:var(--serif);
+    font-size:18px;
+    font-weight:700;
+    color:var(--green-800);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .about h3::before{content:"";width:22px;height:2px;background:var(--orange);}
+  .about p{font-size:14.5px;color:#38473E;line-height:1.85;margin-bottom:10px;}
+  .about p:last-of-type{margin-bottom:14px;}
+  .about .stats{display:flex;flex-wrap:wrap;gap:10px;}
+  .about .stat{
+    flex:1 1 120px;
+    background:var(--green-050);
+    border:1px solid var(--green-100);
+    border-radius:12px;
+    padding:10px 14px;
+    text-align:center;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .about .stat:hover{transform:translateY(-3px);box-shadow:0 10px 22px -12px rgba(20,56,42,.4);}
+  .about .stat b{
+    display:block;
+    font-family:var(--serif);
+    font-size:24px;
+    font-weight:900;
+    background:linear-gradient(120deg,var(--orange),var(--green-600));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .about .stat span{font-size:12px;color:var(--muted);}
+
+  /* ===== 部门导航条 ===== */
+  .dept-nav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    overflow-x:auto;
+    scrollbar-width:thin;
+    scrollbar-color:var(--green-300) transparent;
+    background:rgba(247,245,238,.93);
+    backdrop-filter:blur(8px);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:10px 12px 10px 132px;
+    margin-bottom:22px;
+  }
+  .dept-nav::-webkit-scrollbar{height:6px;}
+  .dept-nav::-webkit-scrollbar-track{background:transparent;}
+  .dept-nav::-webkit-scrollbar-thumb{background:var(--green-300);border-radius:3px;}
+  .dept-nav::-webkit-scrollbar-thumb:hover{background:var(--green-500);}
+  .dchip{
+    flex:0 0 auto;
+    font-family:var(--sans);
+    font-size:13px;
+    padding:7px 13px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--ink);
+    text-decoration:none;
+    white-space:nowrap;
+    transition:all .16s;
+  }
+  .dchip:hover{border-color:var(--green-500);color:var(--green-700);transform:translateY(-1px);}
+  .nav-divider{flex:0 0 auto;width:1px;height:20px;background:var(--line);}
+  .nav-btn{
+    flex:0 0 auto;
+    font-family:var(--sans);
+    font-size:12.5px;
+    padding:7px 13px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--green-800);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:all .16s;
+  }
+  .nav-btn:hover{background:var(--green-600);border-color:var(--green-600);color:#fff;}
+
+  /* ===== 部门卡片 ===== */
+  .dept-list{display:grid;gap:14px;}
+  .dept-card{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--card);
+    overflow:hidden;
+    scroll-margin-top:130px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .dept-card::before{
+    content:"";
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:0;
+    background:linear-gradient(180deg,var(--orange),var(--green-500));
+    transition:width .28s ease;
+    z-index:1;
+    pointer-events:none;
+  }
+  .dept-card[open]::before{width:3px;}
+  .dept-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(20,56,42,.45);}
+  .dept-card[open]{border-color:var(--green-300);box-shadow:0 18px 40px -20px rgba(20,56,42,.4);}
+  .dept-card::after{
+    content:attr(data-no);
+    position:absolute;
+    right:16px;
+    bottom:0;
+    font-family:var(--serif);
+    font-size:64px;
+    font-weight:900;
+    line-height:.9;
+    color:var(--green-050);
+    pointer-events:none;
+    z-index:0;
+  }
+  .dept-card summary{
+    position:relative;
+    z-index:2;
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 18px;
+    user-select:none;
+  }
+  .dept-card summary::-webkit-details-marker{display:none;}
+  .dept-card summary:hover{background:var(--green-050);}
+  .dept-no{
+    flex:0 0 auto;
+    font-family:var(--serif);
+    font-size:13px;
+    font-weight:700;
+    color:var(--orange);
+    letter-spacing:.08em;
+  }
+  .dept-ico{
+    flex:0 0 auto;
+    width:42px;height:42px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--green-100),var(--green-050));
+    border:1px solid var(--green-100);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    transition:transform .3s ease;
+  }
+  .dept-card summary:hover .dept-ico{transform:scale(1.12) rotate(-8deg);}
+  .dept-name{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--green-800);}
+  .dept-tags{
+    font-size:12px;
+    color:var(--muted);
+    background:var(--green-050);
+    border:1px solid var(--green-100);
+    padding:3px 10px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .dept-arrow{
+    margin-left:auto;
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--orange);
+    color:#fff;
+    font-size:0;
+    line-height:1;
+    font-weight:700;
+    padding:6px 13px;
+    border-radius:999px;
+    letter-spacing:.05em;
+    transition:background .22s ease;
+    animation:arrowPulse 2.4s ease-in-out infinite;
+  }
+  .dept-arrow::before{
+    content:"详情";
+    font-size:12px;
+  }
+  .dept-arrow::after{
+    content:"▾";
+    font-size:11px;
+    transition:transform .25s ease;
+  }
+  .dept-card[open] .dept-arrow{
+    background:var(--green-600);
+    animation:none;
+  }
+  .dept-card[open] .dept-arrow::after{transform:rotate(180deg);}
+  @keyframes arrowPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(224,138,46,.5);transform:translateY(0);}
+    50%{box-shadow:0 0 0 8px rgba(224,138,46,0);transform:translateY(1px);}
+  }
+  .dept-body{
+    position:relative;
+    z-index:2;
+    border-top:1px solid var(--line);
+    padding:14px 18px 18px;
+    display:grid;
+    gap:10px;
+  }
+  .dept-body p{font-size:14.5px;color:#38473E;line-height:1.85;}
+  .dept-body .dept-lead{color:var(--green-700);font-weight:500;}
+  .dept-duties{list-style:none;display:grid;gap:6px;}
+  .dept-duties li{
+    font-size:14px;
+    color:#38473E;
+    padding-left:20px;
+    position:relative;
+  }
+  .dept-duties li::before{
+    content:"";
+    position:absolute;
+    left:0;top:9px;
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--orange);
+  }
+  .dept-body .dept-closing{color:var(--green-800);font-weight:500;}
+  .dept-body .dept-note{font-size:12.5px;color:var(--muted);}
+
+  /* ===== 结尾 ===== */
+  .end-msg{
+    position:relative;
+    overflow:hidden;
+    margin-top:32px;
+    text-align:center;
+    border-radius:20px;
+    padding:36px 24px;
+    background:linear-gradient(135deg,var(--green-900),var(--green-600));
+    color:#F4FAF6;
+    box-shadow:0 20px 44px -22px rgba(20,56,42,.6);
+  }
+  .end-msg::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.13) 50%,transparent 70%);
+    background-size:200% 100%;
+    animation:sheen 5s linear infinite;
+  }
+  @keyframes sheen{to{background-position:-200% 0;}}
+  .end-msg b{
+    position:relative;
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:900;
+    display:block;
+    margin-bottom:8px;
+  }
+  .end-msg p{
+    position:relative;
+    font-size:14.5px;
+    color:#D8E9DF;
+    line-height:1.9;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    background:var(--green-050);
+    padding:32px 6vw;
+    text-align:center;
+  }
+  footer a{
+    color:var(--green-700);
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px dashed var(--green-300);
+  }
+  footer .dis{
+    max-width:700px;
+    margin:10px auto 0;
+    font-size:12.5px;
+    color:var(--muted);
+    line-height:1.8;
+  }
+
+  /* ===== 返回顶部 ===== */
+  .to-top{
+    position:fixed;
+    right:22px;bottom:22px;
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--green-700);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 8px 22px -8px rgba(20,56,42,.5);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s, transform .2s;
+    z-index:50;
+  }
+  .to-top.show{opacity:1;pointer-events:auto;}
+  .to-top:hover{transform:translateY(-3px);}
+
+  /* ===== 返回手册 ===== */
+  .back-fab{
+    position:fixed;
+    top:14px;left:14px;
+    z-index:60;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(20,56,42,.88);
+    backdrop-filter:blur(6px);
+    color:#F4FAF6;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:9px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.28);
+    box-shadow:0 8px 20px -8px rgba(20,56,42,.65);
+    transition:transform .18s, background .18s;
+  }
+  .back-fab:hover{background:var(--green-700);transform:translateY(-2px);}
+  .foot-back{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green-700);
+    color:#fff;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:.05em;
+    padding:12px 28px;
+    border-radius:999px;
+    text-decoration:none;
+    border-bottom:none;
+    box-shadow:0 10px 22px -10px rgba(20,56,42,.55);
+    transition:transform .18s, background .18s;
+  }
+  .foot-back:hover{background:var(--green-600);transform:translateY(-2px);}
+
+  /* ===== 奖项高亮 ===== */
+  .award{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:2px 0 14px;
+    background:linear-gradient(120deg,#F5B83D,#E08A2E);
+    border-radius:14px;
+    padding:14px 18px;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 24px -12px rgba(224,138,46,.7);
+  }
+  .award::after{
+    content:"";
+    position:absolute;
+    top:0;bottom:0;left:-60%;
+    width:40%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:skewX(-20deg);
+    animation:awardSheen 4s ease-in-out infinite;
+  }
+  @keyframes awardSheen{
+    0%{left:-60%}
+    60%,100%{left:130%}
+  }
+  .award-ico{
+    flex:0 0 auto;
+    font-size:30px;
+    line-height:1;
+    animation:awardBob 2.4s ease-in-out infinite;
+  }
+  @keyframes awardBob{
+    0%,100%{transform:translateY(0) rotate(-4deg)}
+    50%{transform:translateY(-4px) rotate(4deg)}
+  }
+  .award-txt b{
+    display:block;
+    font-family:var(--serif);
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:.03em;
+    text-shadow:0 1px 2px rgba(0,0,0,.15);
+  }
+  .award-txt span{
+    display:block;
+    font-size:12.5px;
+    color:#FFF6E3;
+    margin-top:2px;
+  }
+
+  /* ===== 滚动渐入（JS 添加 .reveal 后才生效） ===== */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:520px){
+    .dept-tags{display:none;}
+    .hero{padding:76px 6vw 60px;}
+    .to-top{right:14px;bottom:14px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;}
+  }
+</style>
+</head>
+<body>
+
+<a class="back-fab" href="index.html">← 返回答疑手册</a>
+
+<!-- ===== 顶部横幅 ===== -->
+<header class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="hero-inner">
+    <div class="kicker">吉林农业科技学院 · 校易班</div>
+    <h1>部门招新 · 加入我们易班</h1>
+    <p class="sub">校易班学生工作站纳新啦，快来成为"易"家人~<br>8 个部门各具精彩，总有一个适合你。</p>
+    <div class="ctas">
+      <a class="hero-cta primary" href="#depts">🎉 加入我们易班！</a>
+      <a class="hero-cta ghost" href="#about">先看看易班 ↓</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 主体 ===== -->
+<main>
+
+  <!-- 关于易班 -->
+  <section class="about rv" id="about">
+    <h3>关于农院易班</h3>
+    <p>吉林农业科技学院易班学生工作站（以下简称"农院易班"）隶属于学校党委学生工作部，是校级学生组织。下设站长 1 名、副站长 2 名，以及发展运营部、多媒体工作部、传媒编导部、活动策划部、采编宣传部、文化设计部、主持播音部、秘书处共 8 个部门，分别负责不同类别的工作，服务全校师生的在校网络学习生活，保障易班平台的平稳运行。</p>
+    <div class="award">
+      <span class="award-ico">🏆</span>
+      <div class="award-txt">
+        <b>国家级、省级、市级奖项 48 项</b>
+        <span>校易班及易班学生骨干累计获得</span>
+      </div>
+    </div>
+    <p>自成立以来，工作站先后自主研发"易晓帮"平台，创作《青春邮筒—未寄出的信件》《331国道：吉林边境声音的备忘录》《民族簇、山河赴—爱我中华》等优秀网络文化作品。</p>
+    <p>农院易班拥有独立办公室，坐落于学校体育场东侧，室内办公、拍摄设备一应俱全，我们期待你的到来~</p>
+    <div class="stats count-wrap">
+      <div class="stat"><b><span class="num" data-count="8">0</span></b><span>个部门</span></div>
+      <div class="stat"><b><span class="num" data-count="48">0</span></b><span>项国省市奖项</span></div>
+      <div class="stat"><b><span class="num" data-count="1">0</span></b><span>间独立办公室</span></div>
+    </div>
+  </section>
+
+  <div class="sec-head rv" id="depts">
+    <h2>各部门介绍</h2>
+    <p>点击卡片展开查看详情，或用上方导航条快速跳转~</p>
+  </div>
+
+  <!-- 部门导航条 -->
+  <nav class="dept-nav">
+    <a class="dchip" href="#dept-1">🎬 传媒编导部</a>
+    <a class="dchip" href="#dept-2">📱 采编宣传部</a>
+    <a class="dchip" href="#dept-3">🎨 文化设计部</a>
+    <a class="dchip" href="#dept-4">📋 秘书处</a>
+    <a class="dchip" href="#dept-5">🎤 主持播音部</a>
+    <a class="dchip" href="#dept-6">💻 发展运营部</a>
+    <a class="dchip" href="#dept-7">📹 多媒体工作室</a>
+    <a class="dchip" href="#dept-8">🎯 活动策划部</a>
+    <span class="nav-divider"></span>
+    <button class="nav-btn" id="btnExpandAll">全部展开</button>
+    <button class="nav-btn" id="btnCollapseAll">全部收起</button>
+  </nav>
+
+  <div class="dept-list">
+
+    <!-- 1 传媒编导部 -->
+    <details class="dept-card rv" id="dept-1" data-no="01">
+      <summary>
+        <span class="dept-no">01</span>
+        <span class="dept-ico">🎬</span>
+        <span class="dept-name">传媒编导部</span>
+        <span class="dept-tags">视频 · 导演 · 后期</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">兼具专业性与综合性的影视创作团队，覆盖创作全流程与大型活动直播需求。</p>
+        <ul class="dept-duties">
+          <li>视频创意策划、文案撰写、拍摄执行、流程统筹与导演把控</li>
+          <li>音频录制与后期制作</li>
+          <li>摄像机、无人机等设备操作</li>
+        </ul>
+        <p>加入即可系统学习 PR、AE、AU 等软件，提升个人传媒实践能力。</p>
+        <p class="dept-closing">想掌握视音频剪辑、开启你的创意之旅？那就别错过传媒编导部！</p>
+      </div>
+    </details>
+
+    <!-- 2 采编宣传部 -->
+    <details class="dept-card rv" id="dept-2" data-no="02">
+      <summary>
+        <span class="dept-no">02</span>
+        <span class="dept-ico">📱</span>
+        <span class="dept-name">采编宣传部</span>
+        <span class="dept-tags">公众号 · 文案 · 设计</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">易班信息传播与品牌推广的核心力量，负责官方公众号的运营工作。</p>
+        <ul class="dept-duties">
+          <li>第一时间捕捉校内新鲜事</li>
+          <li>多视角、多平台开展校园活动的宣传与推广</li>
+        </ul>
+        <p>无论你是审美在线的设计爱好者，还是脑洞大开的创意达人，都欢迎报名加入！</p>
+        <p class="dept-closing">让我们一起用文字和创意，记录并书写精彩的大学生活新篇章。</p>
+        <p class="dept-note">✨ 部门项目曾获「2025 年度易班优质思政内容建设培育项目」</p>
+      </div>
+    </details>
+
+    <!-- 3 文化设计部 -->
+    <details class="dept-card rv" id="dept-3" data-no="03">
+      <summary>
+        <span class="dept-no">03</span>
+        <span class="dept-ico">🎨</span>
+        <span class="dept-name">文化设计部</span>
+        <span class="dept-tags">设计 · 周边 · 摄影</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">一个满溢欢乐与创意的温暖集体。</p>
+        <ul class="dept-duties">
+          <li>运用 PS、An 等软件，亲手打造原创海报、动画视频</li>
+          <li>借助手绘板设计易班专属周边，用巧思赋予物品独特意义</li>
+          <li>拿起相机捕捉风景的灵动、人物的鲜活、静物的雅致</li>
+        </ul>
+        <p class="dept-closing">加入文化设计部，用镜头定格每一个幸福时刻，用设计传递无限热爱！</p>
+      </div>
+    </details>
+
+    <!-- 4 秘书处 -->
+    <details class="dept-card rv" id="dept-4" data-no="04">
+      <summary>
+        <span class="dept-no">04</span>
+        <span class="dept-ico">📋</span>
+        <span class="dept-name">秘书处</span>
+        <span class="dept-tags">文档 · 统筹 · 日常</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">易班高效运转的重要支撑部门。</p>
+        <ul class="dept-duties">
+          <li>站内文档的统计与整理</li>
+          <li>易班周边规整等日常管理事务</li>
+        </ul>
+        <p>这里不仅是严谨有序的工作空间，更是充满欢声笑语的温暖集体——有耐心指导的学长学姐相伴，还有实用的专业技能培训助力成长。</p>
+        <p class="dept-closing">易班秘书处期待你的加入，与我们一同"易"路同行，共赴成长！</p>
+      </div>
+    </details>
+
+    <!-- 5 主持播音部 -->
+    <details class="dept-card rv" id="dept-5" data-no="05">
+      <summary>
+        <span class="dept-no">05</span>
+        <span class="dept-ico">🎤</span>
+        <span class="dept-name">主持播音部</span>
+        <span class="dept-tags">主持 · 配音 · 朗诵</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">成就每一场精彩舞台的关键力量，每一次完美呈现的背后都离不开我们的用心付出。</p>
+        <ul class="dept-duties">
+          <li>参加各类朗诵演讲赛事</li>
+          <li>学校活动主持、视频配音</li>
+          <li>"音动农院"栏目制作</li>
+        </ul>
+        <p>在这里，你能站上舞台掌控全场，让青春在聚光灯下绽放光彩。</p>
+        <p class="dept-closing">这是一个颜值与实力并存的部门，期待拥有最美声音的你加入这里！</p>
+      </div>
+    </details>
+
+    <!-- 6 发展运营部 -->
+    <details class="dept-card rv" id="dept-6" data-no="06">
+      <summary>
+        <span class="dept-no">06</span>
+        <span class="dept-ico">💻</span>
+        <span class="dept-name">发展运营部</span>
+        <span class="dept-tags">APP · 优课 · 运维</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">易班线上服务稳定运行的核心"幕后力量"。</p>
+        <ul class="dept-duties">
+          <li>易班 APP 与易晓帮的运营维护</li>
+          <li>学生数据整理、轻应用上架</li>
+          <li>优课制作</li>
+        </ul>
+        <p>正是这个"神秘的线上组织"在幕后的默默耕耘，保障了易班 APP 和易晓帮的顺畅运转。</p>
+        <p class="dept-closing">这里是技术爱好者的理想平台，渴望深入了解系统管理的同学，发展运营部期待你的加入！</p>
+      </div>
+    </details>
+
+    <!-- 7 多媒体工作室 -->
+    <details class="dept-card rv" id="dept-7" data-no="07">
+      <summary>
+        <span class="dept-no">07</span>
+        <span class="dept-ico">📹</span>
+        <span class="dept-name">多媒体工作室</span>
+        <span class="dept-tags">抖音 · 短视频 · 航拍</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">主要负责短视频内容制作。</p>
+        <ul class="dept-duties">
+          <li>校易班官方抖音账号运营</li>
+          <li>微电影创作</li>
+          <li>无人机航拍、专业摄影机及稳定器操作</li>
+          <li>校园风景、热点内容及学校大型活动的录制拍摄</li>
+        </ul>
+        <p>若你对 PR、AE、AU、C4D 等专业软件充满兴趣，渴望在实践中提升视频创作技术——</p>
+        <p class="dept-closing">多媒体工作室绝对是你的不二之选！</p>
+      </div>
+    </details>
+
+    <!-- 8 活动策划部 -->
+    <details class="dept-card rv" id="dept-8" data-no="08">
+      <summary>
+        <span class="dept-no">08</span>
+        <span class="dept-ico">🎯</span>
+        <span class="dept-name">活动策划部</span>
+        <span class="dept-tags">策划 · 创意 · 执行</span>
+        <span class="dept-arrow">▾</span>
+      </summary>
+      <div class="dept-body">
+        <p class="dept-lead">校园里由易班打造的精彩活动背后，都离不开活动策划部的全力打造。</p>
+        <ul class="dept-duties">
+          <li>线上线下活动的整体策划、流程安排与统筹协调</li>
+          <li>活动方案撰写</li>
+        </ul>
+        <p>在这里，你能系统学习策划案的撰写技巧与排版规范，还能提升统筹协调与交涉能力。每当易班启动活动筹备，这里便会汇聚创意与活力，迸发独特的生命力。</p>
+        <p class="dept-closing">想解锁活动策划的全流程技能？活动策划部期待你的加入！</p>
+        <p class="dept-note">✨ 活动案例：《2025 农院草地音乐节》</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- 结尾 -->
+  <section class="end-msg rv">
+    <b>易班不一般，我们是并肩同行的"易"家人！</b>
+    <p>诚挚邀请每一位同学加入易班这个温暖的大家庭。<br>也衷心祝愿已经加入的伙伴们，都能在这里找到心之所向的热爱，收获属于自己的成长。</p>
+  </section>
+
+</main>
+
+<footer>
+  <a class="foot-back" href="index.html">← 返回 2026 新生入学答疑手册</a>
+  <div class="dis">报名及纳新后续通知，请留意校易班官方 QQ 群与公众号发布的最新公告；本页面各部门介绍以实际招新公告为准。</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ===== 滚动渐入（无 JS 时页面完全可见） ===== */
+  var rvs = Array.prototype.slice.call(document.querySelectorAll(".rv"));
+  rvs.forEach(function(el, i){
+    el.classList.add("reveal");
+    if(el.classList.contains("dept-card")){
+      el.style.transitionDelay = (i % 4) * 0.07 + "s";
+    }
+  });
+
+  /* ===== 数字滚动计数 ===== */
+  function animateCounts(wrap){
+    if(!wrap) return;
+    var nums = wrap.querySelectorAll("[data-count]");
+    Array.prototype.forEach.call(nums, function(num){
+      var target = parseInt(num.getAttribute("data-count"), 10) || 0;
+      var t0 = null;
+      function tick(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts - t0) / 900, 1);
+        num.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if(p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+
+  /* ===== 滚动观察 ===== */
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add("in");
+          if(en.target.classList.contains("count-wrap")) animateCounts(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.12});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else {
+    rvs.forEach(function(el){ el.classList.add("in"); });
+    animateCounts(document.querySelector(".count-wrap"));
+  }
+
+  /* ===== 全部展开 / 收起 ===== */
+  document.getElementById("btnExpandAll").addEventListener("click", function(){
+    var cards = document.querySelectorAll(".dept-card");
+    for(var i=0;i<cards.length;i++) cards[i].open = true;
+  });
+  document.getElementById("btnCollapseAll").addEventListener("click", function(){
+    var cards = document.querySelectorAll(".dept-card");
+    for(var i=0;i<cards.length;i++) cards[i].open = false;
+  });
+
+  /* ===== 导航条滚轮横滑 ===== */
+  var nav = document.querySelector(".dept-nav");
+  if(nav){
+    nav.addEventListener("wheel", function(e){
+      if(nav.scrollWidth > nav.clientWidth){
+        e.preventDefault();
+        nav.scrollLeft += e.deltaY;
+      }
+    }, {passive:false});
+  }
+
+  /* ===== 回到顶部 ===== */
+  var toTop = document.getElementById("toTop");
+  window.addEventListener("scroll", function(){
+    toTop.classList.toggle("show", window.scrollY > 500);
+  }, {passive:true});
+  toTop.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+})();
+</script>
+</body>
+</html>
