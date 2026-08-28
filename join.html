@@ -176,28 +176,6 @@
   .about h3::before{content:"";width:22px;height:2px;background:var(--orange);}
   .about p{font-size:14.5px;color:#38473E;line-height:1.85;margin-bottom:10px;}
   .about p:last-of-type{margin-bottom:14px;}
-  .about .stats{display:flex;flex-wrap:wrap;gap:10px;}
-  .about .stat{
-    flex:1 1 120px;
-    background:var(--green-050);
-    border:1px solid var(--green-100);
-    border-radius:12px;
-    padding:10px 14px;
-    text-align:center;
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .about .stat:hover{transform:translateY(-3px);box-shadow:0 10px 22px -12px rgba(20,56,42,.4);}
-  .about .stat b{
-    display:block;
-    font-family:var(--serif);
-    font-size:24px;
-    font-weight:900;
-    background:linear-gradient(120deg,var(--orange),var(--green-600));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-  .about .stat span{font-size:12px;color:var(--muted);}
 
   /* ===== 部门导航条 ===== */
   .dept-nav{
@@ -612,11 +590,6 @@
     </div>
     <p>自成立以来，工作站先后自主研发"易晓帮"平台，创作《青春邮筒—未寄出的信件》《331国道：吉林边境声音的备忘录》《民族簇、山河赴—爱我中华》等优秀网络文化作品。</p>
     <p>农院易班拥有独立办公室，坐落于学校体育场东侧，室内办公、拍摄设备一应俱全，我们期待你的到来~</p>
-    <div class="stats count-wrap">
-      <div class="stat"><b><span class="num" data-count="8">0</span></b><span>个部门</span></div>
-      <div class="stat"><b><span class="num" data-count="48">0</span></b><span>项国省市奖项</span></div>
-      <div class="stat"><b><span class="num" data-count="1">0</span></b><span>间独立办公室</span></div>
-    </div>
   </section>
 
   <div class="sec-head rv" id="depts">
@@ -840,30 +813,12 @@
     }
   });
 
-  /* ===== 数字滚动计数 ===== */
-  function animateCounts(wrap){
-    if(!wrap) return;
-    var nums = wrap.querySelectorAll("[data-count]");
-    Array.prototype.forEach.call(nums, function(num){
-      var target = parseInt(num.getAttribute("data-count"), 10) || 0;
-      var t0 = null;
-      function tick(ts){
-        if(!t0) t0 = ts;
-        var p = Math.min((ts - t0) / 900, 1);
-        num.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-        if(p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  }
-
   /* ===== 滚动观察 ===== */
   if("IntersectionObserver" in window){
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
         if(en.isIntersecting){
           en.target.classList.add("in");
-          if(en.target.classList.contains("count-wrap")) animateCounts(en.target);
           io.unobserve(en.target);
         }
       });
@@ -871,7 +826,6 @@
     rvs.forEach(function(el){ io.observe(el); });
   } else {
     rvs.forEach(function(el){ el.classList.add("in"); });
-    animateCounts(document.querySelector(".count-wrap"));
   }
 
   /* ===== 全部展开 / 收起 ===== */
