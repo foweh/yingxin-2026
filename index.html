@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吉农科 2026 新生入学答疑手册</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+  :root{
+    --green-900:#14382A;
+    --green-800:#1B4A38;
+    --green-700:#1F5A41;
+    --green-600:#2F7D5B;
+    --green-500:#3E946F;
+    --green-100:#E4F0E9;
+    --green-050:#F1F7F3;
+    --cream:#F7F5EE;
+    --ink:#24322B;
+    --muted:#6B7A72;
+    --line:#E3E7E1;
+    --orange:#E08A2E;
+    --orange-050:#FBF1E2;
+    --card:#FFFFFF;
+    --serif:"Noto Serif SC", "Songti SC", "SimSun", serif;
+    --sans:"Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    min-height:480px;
+    display:flex;
+    align-items:flex-end;
+    background:
+      linear-gradient(180deg, rgba(20,56,42,.18) 0%, rgba(20,56,42,.62) 55%, rgba(20,56,42,.88) 100%),
+      url("https://aka.doubaocdn.com/s/UrgTHFNuPW") center 62%/cover no-repeat;
+    color:#F4FAF6;
+    padding:96px 6vw 0;
+  }
+  .hero-inner{
+    max-width:1080px;
+    margin:0 auto;
+    width:100%;
+    padding-bottom:56px;
+  }
+  .hero-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    letter-spacing:.18em;
+    font-weight:500;
+    color:#D6EFE1;
+    margin-bottom:18px;
+    text-transform:uppercase;
+  }
+  .hero-kicker::before{
+    content:"";
+    width:34px;height:2px;background:var(--orange);display:inline-block;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:900;
+    font-size:clamp(34px,5vw,58px);
+    line-height:1.16;
+    letter-spacing:.02em;
+    margin-bottom:16px;
+  }
+  .hero p.sub{
+    font-size:clamp(15px,2vw,18px);
+    font-weight:300;
+    color:#E7F2EC;
+    max-width:640px;
+    margin-bottom:30px;
+  }
+  .hero-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:8px;
+  }
+  .stat{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:14px;
+    padding:12px 20px;
+    min-width:128px;
+  }
+  .stat b{
+    display:block;
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:.01em;
+  }
+  .stat span{
+    font-size:12.5px;
+    color:#D6E7DD;
+    letter-spacing:.04em;
+  }
+
+  /* ===== 时间轴 ===== */
+  .timeline-wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 6vw;
+  }
+  .timeline{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px 30px;
+    margin-top:-34px;
+    position:relative;
+    box-shadow:0 18px 40px -22px rgba(20,56,42,.35);
+  }
+  .timeline h3{
+    font-family:var(--serif);
+    font-size:17px;
+    font-weight:700;
+    color:var(--green-800);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .timeline h3::after{content:"";flex:1;height:1px;background:var(--line);}
+  .tl-steps{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+  }
+  .tl-step{
+    border-left:2px solid var(--green-100);
+    padding:4px 0 4px 14px;
+  }
+  .tl-step b{
+    display:block;
+    font-size:13px;
+    color:var(--green-600);
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .tl-step p{
+    font-size:13px;
+    color:var(--ink);
+    line-height:1.55;
+  }
+
+  /* ===== 主体布局 ===== */
+  .main{
+    max-width:1080px;
+    margin:0 auto;
+    padding:44px 6vw 90px;
+  }
+  .sec-head{
+    margin-bottom:22px;
+  }
+  .sec-head h2{
+    font-family:var(--serif);
+    font-size:28px;
+    font-weight:900;
+    color:var(--green-900);
+    letter-spacing:.01em;
+  }
+  .sec-head p{
+    color:var(--muted);
+    font-size:14.5px;
+    margin-top:6px;
+  }
+
+  /* 搜索与工具栏 */
+  .toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:center;
+    margin-bottom:20px;
+  }
+  .search-box{
+    flex:1;
+    min-width:240px;
+    position:relative;
+  }
+  .search-box svg{
+    position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:18px;height:18px;stroke:var(--muted);pointer-events:none;
+  }
+  .search-box input{
+    width:100%;
+    padding:13px 16px 13px 42px;
+    font-size:15px;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    outline:none;
+    transition:border-color .18s, box-shadow .18s;
+  }
+  .search-box input:focus{
+    border-color:var(--green-500);
+    box-shadow:0 0 0 3px rgba(46,125,91,.14);
+  }
+  .toolbar .actions{
+    display:flex;gap:10px;
+  }
+  .btn{
+    font-family:var(--sans);
+    font-size:13.5px;
+    padding:11px 16px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--green-800);
+    cursor:pointer;
+    transition:background .16s, border-color .16s;
+  }
+  .btn:hover{background:var(--green-050);border-color:var(--green-100);}
+
+  /* 分类导航 */
+  .cat-nav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(247,245,238,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    margin-bottom:26px;
+    padding:12px 0;
+  }
+  .cat-nav-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 6vw;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .cat-nav-inner::-webkit-scrollbar{display:none;}
+  .cat-chip{
+    flex:0 0 auto;
+    font-family:var(--sans);
+    font-size:13.5px;
+    padding:8px 15px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--ink);
+    cursor:pointer;
+    transition:all .16s;
+    white-space:nowrap;
+  }
+  .cat-chip:hover{border-color:var(--green-500);color:var(--green-700);}
+  .cat-chip.active{
+    background:var(--green-600);
+    border-color:var(--green-600);
+    color:#fff;
+  }
+
+  /* 问答卡片 */
+  .qa-section{margin-bottom:40px;scroll-margin-top:120px;}
+  .qa-cat-title{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:16px;
+    padding-top:8px;
+  }
+  .qa-cat-title h3{
+    font-family:var(--serif);
+    font-size:21px;
+    font-weight:700;
+    color:var(--green-800);
+  }
+  .qa-cat-title .no{
+    font-family:var(--serif);
+    font-size:13px;
+    color:var(--orange);
+    font-weight:700;
+    letter-spacing:.1em;
+  }
+  .qa-cat-title .count{
+    font-size:12.5px;
+    color:var(--muted);
+    margin-left:auto;
+  }
+  .qa-list{
+    display:grid;
+    gap:10px;
+  }
+  .qa{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    transition:border-color .18s, box-shadow .18s;
+  }
+  .qa.open{border-color:var(--green-200,#CFE2D8);box-shadow:0 10px 26px -18px rgba(20,56,42,.35);}
+  .qa-q{
+    position:relative;
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    font-family:var(--sans);
+    font-size:15px;
+    font-weight:500;
+    color:var(--ink);
+    padding:15px 46px 15px 18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    line-height:1.5;
+  }
+  .qa-q .q-mark{
+    flex:0 0 auto;
+    width:26px;height:26px;
+    border-radius:8px;
+    background:var(--green-100);
+    color:var(--green-700);
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .qa-q .chev{
+    position:absolute;right:16px;top:50%;
+    transform:translateY(-50%);
+    width:18px;height:18px;
+    stroke:var(--muted);
+    transition:transform .22s;
+  }
+  .qa.open .chev{transform:translateY(-50%) rotate(180deg);}
+  .qa-a-wrap{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .28s ease;
+  }
+  .qa.open .qa-a-wrap{grid-template-rows:1fr;}
+  .qa-a{
+    overflow:hidden;
+    padding:0 18px;
+    border-top:1px solid transparent;
+  }
+  .qa.open .qa-a{
+    border-top-color:var(--line);
+    padding-top:13px;
+    padding-bottom:17px;
+  }
+  .qa-a p{
+    font-size:14.5px;
+    color:#38473E;
+    line-height:1.85;
+  }
+  .qa-a .tag{
+    display:inline-block;
+    margin-top:10px;
+    font-size:12px;
+    color:var(--muted);
+    background:var(--green-050);
+    border:1px solid var(--green-100);
+    padding:3px 10px;
+    border-radius:999px;
+  }
+
+  /* 防骗提示 */
+  .guard{
+    margin-top:46px;
+    background:linear-gradient(120deg,var(--orange-050),#FDF7EC);
+    border:1px solid #F0DDBE;
+    border-radius:18px;
+    padding:26px 30px;
+  }
+  .guard h3{
+    font-family:var(--serif);
+    font-size:18px;
+    font-weight:700;
+    color:#9A5B16;
+    margin-bottom:12px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .guard ul{
+    list-style:none;
+    display:grid;
+    gap:8px;
+  }
+  .guard li{
+    font-size:14.5px;
+    color:#5F4626;
+    padding-left:22px;
+    position:relative;
+    line-height:1.75;
+  }
+  .guard li::before{
+    content:"";
+    position:absolute;left:0;top:12px;
+    width:8px;height:8px;border-radius:50%;
+    background:var(--orange);
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    background:var(--green-050);
+    padding:36px 6vw;
+    text-align:center;
+  }
+  footer .dis{
+    max-width:760px;
+    margin:0 auto;
+    font-size:12.5px;
+    color:var(--muted);
+    line-height:1.9;
+  }
+  footer .brand{
+    font-family:var(--serif);
+    font-weight:700;
+    color:var(--green-700);
+    margin-bottom:8px;
+    font-size:15px;
+  }
+
+  /* 回到顶部 */
+  .to-top{
+    position:fixed;
+    right:22px;bottom:22px;
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--green-700);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 8px 22px -8px rgba(20,56,42,.5);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s, transform .2s;
+    z-index:50;
+  }
+  .to-top.show{opacity:1;pointer-events:auto;}
+  .to-top:hover{transform:translateY(-3px);}
+
+  /* 无结果 */
+  .empty{
+    display:none;
+    text-align:center;
+    padding:60px 20px;
+    color:var(--muted);
+  }
+  .empty.show{display:block;}
+  .empty b{display:block;font-family:var(--serif);font-size:20px;color:var(--green-800);margin-bottom:8px;}
+
+  @media (max-width:820px){
+    .hero{min-height:400px;padding-top:70px;}
+    .tl-steps{grid-template-columns:1fr 1fr;}
+    .qa-a p{font-size:14px;}
+    .hero-stats{gap:8px;}
+    .stat{min-width:110px;padding:10px 14px;}
+    .stat b{font-size:18px;}
+  }
+  @media (max-width:520px){
+    .hero{padding-top:56px;}
+    .tl-steps{grid-template-columns:1fr;}
+    .toolbar{flex-direction:column;align-items:stretch;}
+    .toolbar .actions{justify-content:flex-end;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">吉林农业科技学院 · 校易班迎新答疑群整理</div>
+    <h1>2026 新生入学答疑手册</h1>
+    <p class="sub">报到、军训、宿舍、缴费、档案、校园生活……我们把答疑群里学长学姐反复回答的高频问题整理成册，一份手册，入学不慌。</p>
+    <div class="hero-stats">
+      <div class="stat"><b>9月4–5日</b><span>新生报到</span></div>
+      <div class="stat"><b>约14天</b><span>军训时长</span></div>
+      <div class="stat"><b>6:50</b><span>早操开始</span></div>
+      <div class="stat"><b>2–4元</b><span>洗一次澡</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 入学时间轴 ===== -->
+<div class="timeline-wrap">
+  <div class="timeline">
+    <h3>入学关键节点速览</h3>
+    <div class="tl-steps">
+      <div class="tl-step"><b>7月底–8月</b><p>进答疑群、按入学须知注册易班/易校园/e学工，准备证件照、办建行卡、买票到吉林站</p></div>
+      <div class="tl-step"><b>8月底</b><p>分班、分宿舍结果陆续出来（e学工微公寓可查），导员建群、统计学费</p></div>
+      <div class="tl-step"><b>9月4–5日</b><p>到校报到、办理入住、把档案交给导员，报到后两三天内开始军训</p></div>
+      <div class="tl-step"><b>军训两周</b><p>统一军训服、内务整理；军训结束后正式上课、选课、学生会与社团纳新</p></div>
+      <div class="tl-step"><b>开学后</b><p>学习通看课表、抢体育课、社团活动、评奖评优，开启大学生活</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 分类导航 ===== -->
+<nav class="cat-nav" id="catNav">
+  <div class="cat-nav-inner" id="catNavInner"></div>
+</nav>
+
+<!-- ===== 主体 ===== -->
+<main class="main">
+  <div class="sec-head">
+    <h2>高频问答</h2>
+    <p>点击问题展开答案；支持关键词搜索与分类筛选。</p>
+  </div>
+
+  <div class="toolbar">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="搜索关键词，如：军训 / 宿舍 / 缴费 / 档案……" autocomplete="off">
+    </div>
+    <div class="actions">
+      <button class="btn" id="btnExpandAll">全部展开</button>
+      <button class="btn" id="btnCollapseAll">全部收起</button>
+    </div>
+  </div>
+
+  <div id="qaRoot"></div>
+
+  <div class="empty" id="emptyState">
+    <b>没有找到相关问答</b>
+    <p>换个关键词试试，或直接在本群提问，学长学姐会为你解答。</p>
+  </div>
+
+  <!-- ===== 防骗提示 ===== -->
+  <section class="guard">
+    <h3>入群守则与防骗提醒</h3>
+    <ul>
+      <li>进群请修改群昵称为「专业 + 姓名」，方便沟通核对。</li>
+      <li>本群仅用于新生入学咨询与官方通知推送，群内严禁发布广告、兼职推销、不明二维码、外网链接与不实谣言。</li>
+      <li>谨防陌生人私加好友推销「校园卡、被褥、驾校、培训」等内容，所有信息一律以学校官方发布为准（e学工 / 易学工等公众号）。</li>
+      <li>任何要求私下转账、缴费的消息，先在群里向学长学姐核实，保护个人财产安全。</li>
+      <li>文明礼貌交流，互帮互助，共同维护干净的答疑环境。</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="brand">吉农科 2026 新生入学答疑手册</div>
+  <div class="dis">本页面内容整理自「26级吉农科新生易班答疑群」群内答疑记录，由在校易班学长学姐的公开答复汇编而成，仅供新生参考。涉及报到时间、缴费、军训、宿舍安排等具体事项，请以学校官方通知、入学须知及各学院辅导员的通知为准。</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ===== 数据 ===== */
+  var CATS = [
+    {id:"baodao", name:"报到篇"},
+    {id:"junxun", name:"军训篇"},
+    {id:"sushe", name:"宿舍篇"},
+    {id:"chuangshang", name:"床上用品"},
+    {id:"jiaofei", name:"缴费与银行卡"},
+    {id:"app", name:"易班与APP"},
+    {id:"dangan", name:"档案与团关系"},
+    {id:"jiaotong", name:"交通与校区"},
+    {id:"zhaopian", name:"证件与照片"},
+    {id:"shenghuo", name:"校园生活"},
+    {id:"xuexi", name:"学习篇"},
+    {id:"shetuan", name:"社团与组织"},
+    {id:"zhuanshengben", name:"专升本"}
+  ];
+
+  var QA = [
+    /* 报到篇 */
+    {c:"baodao", q:"什么时候报到？", a:"新生统一在 9 月 4 日—5 日报到。部分通知上写 5 日，但 4 号就可以提前到校办理报到并入住宿舍。报道后两三天开始军训。"},
+    {c:"baodao", q:"可以提前到校报到、住宿舍吗？", a:"可以。9 月 4 号就能报到，报到后就可以去宿舍入住。报到入住后如果要外出，需要请假。如果提前更多天（如 9 月初）到校，宿舍能否入住以学校或辅导员通知为准。"},
+    {c:"baodao", q:"报到当天最晚几点到？", a:"没有强制的最晚时间，但建议尽量白天到校。凌晨到达可能没有接站和办理人员，建议提前规划好行程。"},
+    {c:"baodao", q:"报到需要带什么材料？", a:"带好身份证、录取通知书（需上交）、个人档案（报到当天交给导员）。户口本一般用不上，申请助学金等场景可能需要户口本复印件。具体以入学须知和学院通知为准。"},
+    {c:"baodao", q:"报到流程是怎样的？", a:"一般流程：到校后从南门进，在篮球场附近找到各学院及学团组织的迎新点，办理报到、领取宿舍钥匙、入住。报到当天会有学长学姐和志愿者引导，跟着流程走就行。"},
+    {c:"baodao", q:"报到当天家长能进校吗？能吃饭吗？", a:"报到当天家长可以陪同入校，可以在校内食堂吃个午饭，迎新期间学校对家长比较友好。"},
+    {c:"baodao", q:"报到后还能出校吗？", a:"报到入住后就算入校状态了，临时外出一般需要请假，报到当天晚上如果不住宿舍，最好先跟辅导员请个假。"},
+    {c:"baodao", q:"新生报到要带户口本吗？", a:"一般不需要带户口本原件。只有申请助学金、贫困认定等场景才可能需要户口本复印件，按需准备即可。"},
+    {c:"baodao", q:"提前把大件邮寄到学校，报到当天去取方便吗？", a:"可以提前邮寄，但报到当天取件人数多、驿站会比较忙，建议错峰或合理安排时间。"},
+
+    /* 军训篇 */
+    {c:"junxun", q:"什么时候开始军训？军训多久？", a:"报到后两三天开始军训，军训约两周（14 天左右）。刚到学校很快就军训，提前做好心理准备。"},
+    {c:"junxun", q:"军训服怎么买？多少钱一套？", a:"军训服到学校后会统一通知购买，约 150 元一套，包含短袖、外套、长裤、帽子、腰带、鞋。也可以从学长学姐那里买二手的（便宜不少），但花色可能不完全统一。"},
+    {c:"junxun", q:"军训期间床上用品要统一吗？要叠被子吗？", a:"军训期间一般有内务要求，查寝会检查被子是否叠好（豆腐块）。床上用品整体要求整齐统一，具体以教官和导员要求为准。"},
+    {c:"junxun", q:"军训能带手机吗？晚上能玩吗？", a:"军训期间手机一般统一管理、不能玩，军训结束后休息时间可以用。服从教官安排即可。"},
+    {c:"junxun", q:"军训每天几点开始？强度大吗？", a:"军训一般下午两点或两点半左右开始训练；一天微信步数 2 万+，比较累，注意休息、别熬夜，带好防晒和水。"},
+    {c:"junxun", q:"军训能染发吗？", a:"大学对染发比较宽松、不强制，但颜色太显眼会比较引人注目（容易收获外号）。自己斟酌就好。"},
+    {c:"junxun", q:"军训能免训或请假吗？", a:"身体确实不适可以请假或申请免训，但需要三甲医院开具的证明；免训期间一般也需要参加见习。"},
+    {c:"junxun", q:"军训要带什么？", a:"防晒霜、常用药（防中暑、防水土不服）、软一点的鞋垫（军训鞋比较硬）、水杯。这些都是学长学姐用亲身经历总结的。"},
+    {c:"junxun", q:"军训晚上有安排吗？", a:"一般下午开始训练，晚上可能也有安排，晚训结束后回宿舍洗澡休息。具体作息以教官通知为准。"},
+    {c:"junxun", q:"专升本需要军训吗？", a:"不需要，专升本报到后直接上课，不参加军训。"},
+
+    /* 宿舍篇 */
+    {c:"sushe", q:"宿舍是学校安排还是自己选？", a:"宿舍由学校统一安排分配，不能自选。开学前一周左右会分好，可在 e学工（易学工）公众号的「微公寓」里查询结果。"},
+    {c:"sushe", q:"宿舍几人间？有上床下桌吗？", a:"各校区、各公寓不一样，多为 4—8 人间；上床下桌要看运气，部分公寓有，多数是上下铺。"},
+    {c:"sushe", q:"宿舍有空调吗？冬天供暖吗？", a:"宿舍没有空调，夏天可自备风扇；冬天有供暖，室内很暖和，不用担心冷。"},
+    {c:"sushe", q:"大一能装床帘、蚊帐吗？", a:"大一不让装床帘和蚊帐（查寝会查），升大二就可以了。大一下学期可以开始了解。"},
+    {c:"sushe", q:"宿舍限电吗？能用吹风机吗？", a:"宿舍限电，大功率电器不能用。不过宿舍楼有公共的免费吹风机和直板夹可以使用，插排要挂好、出门关闭电源。"},
+    {c:"sushe", q:"宿舍自带床垫吗？需要自己买吗？", a:"每个床铺自带一块军绿色床垫（偏硬），觉得不够软可以再买一块软的床垫铺在上面，也可以不买。"},
+    {c:"sushe", q:"怎么查自己分到哪个宿舍？", a:"在 e学工（易学工）公众号的「微公寓」里查询，不需要单独下载 App。开学前一周左右出结果。"},
+    {c:"sushe", q:"能换宿舍或换床位吗？", a:"学校原则上统一安排。确有需要的话，一般要求同学院同学双方同意后，找辅导员申请。"},
+    {c:"sushe", q:"大一能带电脑吗？需要买吗？", a:"可以带电脑，没有限制。但第一学期大部分专业用不到电脑，学校有机房，可以观察需求后再决定要不要买。"},
+    {c:"sushe", q:"宿舍柜子能放下 26 寸行李箱吗？", a:"一般可以，具体看所分公寓的柜子规格。大件行李也可以考虑放床下或柜顶，到宿舍看实际情况安排。"},
+    {c:"sushe", q:"宿舍能插网线吗？有网吗？", a:"宿舍一般可以连校园网，网络开通多与校园卡/运营商套餐相关，开学后按需要办理即可。"},
+
+    /* 床上用品 */
+    {c:"chuangshang", q:"床上用品必须买学校统一的吗？", a:"不是必须。可以自己带、网上买，也可以买学校统一渠道的（入学须知上有二维码）。军训期间一般要求内务统一，具体以通知为准。"},
+    {c:"chuangshang", q:"学校的被子怎么样？买多厚的？", a:"宿舍楼内有售卖点可以挑选。被子买 4 斤左右就够，寝室暖气足，冬天不会冷。"},
+    {c:"chuangshang", q:"床垫买什么材质好？", a:"学校自带军绿色硬垫，想更舒适可以加购记忆棉、乳胶或棉垫，看个人睡眠习惯选择，没有统一标准。"},
+    {c:"chuangshang", q:"在哪里买床上用品比较划算？", a:"可以在二手群买学长学姐的（便宜很多），也可以网购或到校买。日常用品学校超市就有，不用提前带太多。"},
+
+    /* 缴费与银行卡 */
+    {c:"jiaofei", q:"学费什么时候交？", a:"线上缴费，不着急。开学前辅导员会统计并通知大家，有问题辅导员会联系你。住宿费要等分完宿舍后才会显示缴费项。"},
+    {c:"jiaofei", q:"学费在哪里交？", a:"通过录取通知书小册子里的二维码 / 官方缴费入口线上缴纳。进入缴费入口后，在「我的」里可以看到自己的个人信息和学号。"},
+    {c:"jiaofei", q:"住宿费一年多少？", a:"住宿费按宿舍类型（几人间）略有不同，分到宿舍后会在缴费项目里显示具体金额，以学校通知为准。"},
+    {c:"jiaofei", q:"学号在哪里看？", a:"学号是 2026 开头的 11 位数字。可以通过缴费入口「我的」里查看个人信息（含学号），认证编号用的也是学号。"},
+    {c:"jiaofei", q:"银行卡必须办建行的吗？", a:"建议统一办中国建设银行的卡，因为奖助学金都发到建行卡上。可以自己在家办，也可以到学校统一办理（学校办可能稍慢，有的会送小礼品）。"},
+    {c:"jiaofei", q:"助学贷款怎么办理？有利息吗？", a:"生源地助学贷款去当地教育局办理。在校期间没有利息，毕业之后才开始计息。学费多出来的部分按学校流程处理，可以咨询辅导员。"},
+    {c:"jiaofei", q:"学费可以开学后再交吗？", a:"可以，开学前辅导员会统计，有问题会联系你。不用太焦虑，按通知走流程即可。"},
+    {c:"jiaofei", q:"医疗保险、学平险必须买吗？", a:"不强制。开学后学校会统一统计，可自愿购买，家里已参保的注意是否冲突。"},
+
+    /* 易班与APP */
+    {c:"app", q:"开学前需要注册哪些 APP？", a:"开学前主要按入学须知注册：易班、易校园、e学工（微信服务号）等。开学后会用学习通（看课表、上网课）和企业微信（年级大群、通知）。"},
+    {c:"app", q:"易班校方认证失败怎么办？", a:"别着急，新生数据还没完全录入，过几天再试。按入学须知上的步骤一步一步认证，认证编号 2026 开头 11 位就是学号。"},
+    {c:"app", q:"易校园是干什么的？", a:"易校园是校园一卡通/支付类 App，洗澡的水卡也在易校园上，充值后用于洗浴和日常消费。"},
+    {c:"app", q:"学习通是干什么的？", a:"学习通用于看课表、上网课、完成课程作业，开学后老师会教大家使用流程。"},
+    {c:"app", q:"刷脸是干嘛的？", a:"刷脸用于进出公寓门和学校大门，报到前按要求完成人脸信息录入即可。"},
+
+    /* 档案与团关系 */
+    {c:"dangan", q:"个人档案什么时候交？", a:"纸质档案报到当天交给辅导员。由高中寄送的按学校要求操作，具体可以问学院群里的老师。"},
+    {c:"dangan", q:"团员档案要封口吗？", a:"团员档案可以不封。带齐团员证、入团志愿书等团员材料放在档案袋里，开学统一提交，资料不全的会通知补齐。"},
+    {c:"dangan", q:"团组织关系怎么转？", a:"不用着急。开学前一周左右会分班，之后团关系会转到具体班级，团支书/导员会通知大家。如果高中催得紧，就先转出。"},
+    {c:"dangan", q:"需要开团员介绍信吗？", a:"一般不需要专门开介绍信。具体以辅导员和学院通知为准，有疑问在群里问或咨询导员。"},
+
+    /* 交通与校区 */
+    {c:"jiaotong", q:"坐火车到哪个站？学校有接站吗？", a:"买到「吉林站」（吉林市），报到期间吉林站有学校接站车送到学校。不建议买到长春站（无接站）。长春到吉林车次很多，很方便。"},
+    {c:"jiaotong", q:"凌晨到校会有接站吗？", a:"凌晨到达可能没有接站和办理人员，建议尽量白天到校，提前规划好行程。"},
+    {c:"jiaotong", q:"九站和左家两个校区怎么分？", a:"学校有九站校区和左家校区，按专业/学院划分，具体以录取通知和学校安排为准。九站离市区近，左家偏郊区。"},
+    {c:"jiaotong", q:"左家校区怎么去市区？", a:"左家校区去市区一般是打车或坐客车，距离较远。左家再怎么说也还是吉林市，周末出行提前规划好时间。"},
+    {c:"jiaotong", q:"报到当天车能开进学校吗？", a:"学生车辆入校一般需要提前和辅导员沟通、门卫登记后放行。校外停车位比较紧张，建议提前安排。"},
+    {c:"jiaotong", q:"快递地址写哪里？取件方便吗？", a:"各校区都有快递驿站，具体地址以学院通知/驿站信息为准，收件人写自己姓名。取件一般需出示拼多多身份码。"},
+
+    /* 证件与照片 */
+    {c:"zhaopian", q:"证件照要准备什么尺寸和底色？", a:"一寸、两寸、小二寸各备几张（一寸为主），红底蓝底都准备一些。存好电子版，学校可以打印。穿正常得体的衣服即可。"},
+    {c:"zhaopian", q:"照片对眼镜、妆容有要求吗？", a:"证件照一般要求五官清晰，具体以用途要求为准。四六级等报名照片尽量用真人照，不要用处理过的。"},
+    {c:"zhaopian", q:"人脸采集用什么底色？", a:"人脸采集一般要求蓝底照片，按通知准备即可。刷脸仅用于进出公寓门和学校大门。"},
+
+    /* 校园生活 */
+    {c:"shenghuo", q:"有早操和晚自习吗？", a:"有早操，6:50 左右开始，每月有固定次数（约 15 次）可自选时间，次数不够会扣分，下雨等特殊情况不用去（会通知）。大一有晚自习，大二在新生军训完才结束晚自习。"},
+    {c:"shenghuo", q:"上课时间怎么安排？", a:"一般早上 8 点到下午 4:40 左右，上午两大节、下午两大节，个别课程晚上有一节。具体看课表。"},
+    {c:"shenghuo", q:"洗澡多少钱？怎么洗？", a:"每次约 2—4 元，用易校园的水卡，进澡堂前先充好钱（澡堂里面信号差）。澡堂有免费吹风机。"},
+    {c:"shenghuo", q:"宿舍楼有吹风机吗？", a:"有，宿舍楼的公共吹风机、直板夹都是免费提供的，不用自己带大功率电器。"},
+    {c:"shenghuo", q:"学校食堂怎么样？", a:"学校有多个食堂，饭菜口味因人而异，整体性价比正常，可用易校园/一卡通支付。周边也有外卖可选。"},
+    {c:"shenghuo", q:"学校有超市吗？", a:"有，日常生活用品到校再买就行，不用提前背一大堆。"},
+    {c:"shenghuo", q:"学校有健身房吗？", a:"九站校区有健身房（校内一个、校外一个），左家校区以现场实际情况为准。"},
+    {c:"shenghuo", q:"快递驿站怎么取件？", a:"校内/附近有快递驿站，取件一般需出示拼多多身份码。开学期间快递较多，注意及时取件。"},
+    {c:"shenghuo", q:"校园里能骑自行车或电动车吗？", a:"校园里骑车的人不算多，看个人习惯。电动车入校相关规定以学校通知为准。"},
+
+    /* 学习篇 */
+    {c:"xuexi", q:"课表在哪里看？", a:"课表在学习通里看，开学后登录学习通即可查看。"},
+    {c:"xuexi", q:"要抢课吗？怎么选课？", a:"大一上需要抢体育课，热门课要拼手速，体育课要上两年。选课前会通知，具体以学校教务安排为准。"},
+    {c:"xuexi", q:"可以转专业吗？", a:"一般需要大一上学期结束后才能申请转专业，具体条件和流程以学校通知为准，有想法可以提前了解。"},
+    {c:"xuexi", q:"学分和绩点是什么？", a:"学分通过课程学习获得，绩点与课程成绩挂钩，影响评奖评优。大学四年学分总量有限，按培养方案完成课程即可。"},
+    {c:"xuexi", q:"四六级必须考吗？", a:"学校没有强制要求，四六级是自愿报考的，想考就考。"},
+    {c:"xuexi", q:"入党流程是怎样的？", a:"开学后可以递交入党申请书，入党最快需要三年，有想法可以提前准备、向辅导员了解流程。"},
+    {c:"xuexi", q:"微专业值得报吗？", a:"学长学姐的建议是：别报。微专业浪费钱和时间精力，微专业学分虽然可以抵跨专业选修学分，但性价比不高。"},
+    {c:"xuexi", q:"奖学金怎么拿？", a:"主要看学业成绩（绩点）和综合表现（评优评先），每学期评定，具体以学院细则为准，好好学习是基础。"},
+    {c:"xuexi", q:"助学金/贫困认定怎么申请？", a:"开学后学校会通知申请，一般需要户口本复印件等证明材料，按流程完成贫困认定后参与评定。"},
+
+    /* 社团与组织 */
+    {c:"shetuan", q:"什么时候招新？", a:"开学后（军训结束前后）会有学生会、各社团、易班等纳新，会通过晚自习和线下宣传通知大家，可以期待一下。"},
+    {c:"shetuan", q:"进学生会难吗？", a:"部门招新没有硬性要求，面试之后会有培训，重在态度和兴趣。可以多了解多尝试，想竞选班委的可以军训时多刷脸、多干活。"},
+    {c:"shetuan", q:"易班是学生会吗？", a:"易班是学生组织/平台，不是学生会。开学后有招新，感兴趣的可以关注。"},
+    {c:"shetuan", q:"带班学长学姐是什么？", a:"各学院会安排带班学长学姐（导助），负责军训期间和新生的对接、答疑，有问题可以找他们。"},
+    {c:"shetuan", q:"必须报社团吗？", a:"不强制，按兴趣选择就好。多参加社团和组织能认识更多朋友，丰富大学生活。"},
+
+    /* 专升本 */
+    {c:"zhuanshengben", q:"专升本需要军训吗？", a:"不需要，专升本报到后直接上课，不参加军训。"},
+    {c:"zhuanshengben", q:"专升本有早操和晚自习吗？", a:"专升本与普通本科的安排不完全一样，具体以学院通知为准，可以进班级群后向辅导员确认。"},
+    {c:"zhuanshengben", q:"专升本需要买电脑吗？", a:"看专业需求，第一学期一般不用急，可观察课程安排后再决定。"}
+  ];
+
+  /* ===== 渲染 ===== */
+  var qaRoot = document.getElementById("qaRoot");
+  var catNavInner = document.getElementById("catNavInner");
+  var emptyState = document.getElementById("emptyState");
+  var searchInput = document.getElementById("searchInput");
+  var activeCat = "all";
+  var keyword = "";
+
+  function catName(id){
+    for(var i=0;i<CATS.length;i++) if(CATS[i].id===id) return CATS[i].name;
+    return "";
+  }
+
+  function renderNav(){
+    var html = '<button class="cat-chip active" data-cat="all">全部</button>';
+    for(var i=0;i<CATS.length;i++){
+      html += '<button class="cat-chip" data-cat="'+CATS[i].id+'">'+CATS[i].name+'</button>';
+    }
+    catNavInner.innerHTML = html;
+  }
+
+  function buildSections(){
+    var html = "";
+    for(var i=0;i<CATS.length;i++){
+      var cat = CATS[i];
+      var items = QA.filter(function(it){ return it.c===cat.id; });
+      if(!items.length) continue;
+      html += '<section class="qa-section" data-cat="'+cat.id+'" data-name="'+cat.name+'">';
+      html += '<div class="qa-cat-title"><span class="no">'+String(i+1).padStart(2,"0")+'</span><h3>'+cat.name+'</h3><span class="count">'+items.length+' 问</span></div>';
+      html += '<div class="qa-list">';
+      for(var j=0;j<items.length;j++){
+        var it = items[j];
+        html += '<div class="qa" data-cat="'+cat.id+'" data-q="'+escapeHtml(it.q)+'" data-a="'+escapeHtml(it.a)+'">';
+        html += '<button class="qa-q" type="button"><span class="q-mark">问</span><span class="q-text">'+escapeHtml(it.q)+'</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>';
+        html += '<div class="qa-a-wrap"><div class="qa-a"><p>'+escapeHtml(it.a)+'</p><span class="tag">分类：'+cat.name+'</span></div></div>';
+        html += '</div>';
+      }
+      html += '</div></section>';
+    }
+    qaRoot.innerHTML = html;
+    bindQA();
+  }
+
+  function escapeHtml(s){
+    return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function bindQA(){
+    var qs = qaRoot.querySelectorAll(".qa-q");
+    for(var i=0;i<qs.length;i++){
+      qs[i].addEventListener("click", function(){
+        var card = this.closest(".qa");
+        card.classList.toggle("open");
+      });
+    }
+  }
+
+  /* ===== 筛选 ===== */
+  function applyFilter(){
+    var kw = keyword.trim().toLowerCase();
+    var sections = qaRoot.querySelectorAll(".qa-section");
+    var anyVisible = false;
+    for(var i=0;i<sections.length;i++){
+      var sec = sections[i];
+      var inCat = (activeCat==="all") || (sec.getAttribute("data-cat")===activeCat);
+      var cards = sec.querySelectorAll(".qa");
+      var secVisible = false;
+      for(var j=0;j<cards.length;j++){
+        var card = cards[j];
+        var q = (card.getAttribute("data-q")||"").toLowerCase();
+        var a = (card.getAttribute("data-a")||"").toLowerCase();
+        var match = (!kw) || (q.indexOf(kw)>-1) || (a.indexOf(kw)>-1);
+        var show = inCat && match;
+        card.style.display = show ? "" : "none";
+        if(show) secVisible = true;
+      }
+      sec.style.display = secVisible ? "" : "none";
+      if(secVisible) anyVisible = true;
+    }
+    emptyState.classList.toggle("show", !anyVisible);
+  }
+
+  /* ===== 导航事件 ===== */
+  catNavInner.addEventListener("click", function(e){
+    var chip = e.target.closest(".cat-chip");
+    if(!chip) return;
+    activeCat = chip.getAttribute("data-cat");
+    var chips = catNavInner.querySelectorAll(".cat-chip");
+    for(var i=0;i<chips.length;i++) chips[i].classList.remove("active");
+    chip.classList.add("active");
+    applyFilter();
+  });
+
+  searchInput.addEventListener("input", function(){
+    keyword = this.value;
+    applyFilter();
+  });
+
+  /* ===== 展开/收起 ===== */
+  document.getElementById("btnExpandAll").addEventListener("click", function(){
+    var cards = qaRoot.querySelectorAll(".qa");
+    for(var i=0;i<cards.length;i++) if(cards[i].style.display!=="none") cards[i].classList.add("open");
+  });
+  document.getElementById("btnCollapseAll").addEventListener("click", function(){
+    var cards = qaRoot.querySelectorAll(".qa");
+    for(var i=0;i<cards.length;i++) cards[i].classList.remove("open");
+  });
+
+  /* ===== 回到顶部 ===== */
+  var toTop = document.getElementById("toTop");
+  window.addEventListener("scroll", function(){
+    toTop.classList.toggle("show", window.scrollY > 600);
+  });
+  toTop.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  /* ===== 初始化 ===== */
+  renderNav();
+  buildSections();
+})();
+</script>
+</body>
+</html>
