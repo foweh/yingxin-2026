@@ -398,6 +398,46 @@
     max-width:100%;
   }
 
+  /* ===== 作品视频链接 ===== */
+  .work-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:2px;
+    background:var(--green-050);
+    border:1px solid var(--green-100);
+    color:var(--green-700);
+    font-size:13px;
+    font-weight:600;
+    padding:8px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    transition:background .16s, border-color .16s, transform .16s;
+  }
+  .work-link:hover{background:var(--green-100);border-color:var(--green-300);transform:translateY(-1px);}
+
+  /* ===== 音频作品 ===== */
+  .dept-audio{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .dept-audio-cover{
+    flex:0 0 auto;
+    width:128px;
+    height:128px;
+    object-fit:cover;
+    border-radius:14px;
+    border:1px solid var(--line);
+    box-shadow:0 10px 22px -12px rgba(20,56,42,.45);
+    background:var(--green-050);
+  }
+  .dept-audio audio{
+    flex:1 1 220px;
+    min-width:200px;
+  }
+
   /* ===== 结尾 ===== */
   .end-msg{
     position:relative;
@@ -660,6 +700,7 @@
         <div class="dept-gallery single">
           <img src="img/chuanmei.jpg" alt="传媒编导部作品展示" loading="lazy">
         </div>
+        <a class="work-link" href="https://weixin.qq.com/sph/ArqCakDDnr" target="_blank" rel="noopener">▶️ 作品视频（视频号）</a>
       </div>
     </details>
 
@@ -704,8 +745,10 @@
           <li>拿起相机捕捉风景的灵动、人物的鲜活、静物的雅致</li>
         </ul>
         <p class="dept-closing">加入文化设计部，用镜头定格每一个幸福时刻，用设计传递无限热爱！</p>
-        <div class="dept-gallery single">
+        <div class="dept-gallery">
           <img src="img/sheji.jpg" alt="文化设计部设计作品" loading="lazy">
+          <img src="img/sheji2.jpg" alt="文化设计部作品 2" loading="lazy">
+          <img src="img/sheji3.png" alt="文化设计部作品 3" loading="lazy">
         </div>
       </div>
     </details>
@@ -755,6 +798,10 @@
           <img src="img/zhuchi1.jpg" alt="主持播音部活动展示 1" loading="lazy">
           <img src="img/zhuchi2.jpg" alt="主持播音部活动展示 2" loading="lazy">
         </div>
+        <div class="dept-audio">
+          <img class="dept-audio-cover" src="img/zhuchi_cover.jpg" alt="主持播音部音频封面" loading="lazy">
+          <audio controls preload="none" src="img/zhuchi.mp3">您的浏览器不支持音频播放</audio>
+        </div>
       </div>
     </details>
 
@@ -803,6 +850,7 @@
           <img src="img/duomeiti2.jpg" alt="多媒体工作室作品 2" loading="lazy">
           <img src="img/duomeiti3.jpg" alt="多媒体工作室作品 3" loading="lazy">
         </div>
+        <a class="work-link" href="https://weixin.qq.com/sph/Af1YopF4pW" target="_blank" rel="noopener">▶️ 作品视频（视频号）</a>
       </div>
     </details>
 
@@ -824,8 +872,9 @@
         <p>在这里，你能系统学习策划案的撰写技巧与排版规范，还能提升统筹协调与交涉能力。每当易班启动活动筹备，这里便会汇聚创意与活力，迸发独特的生命力。</p>
         <p class="dept-closing">想解锁活动策划的全流程技能？活动策划部期待你的加入！</p>
         <p class="dept-note">✨ 活动案例：《2025 农院草地音乐节》</p>
-        <div class="dept-gallery single">
+        <div class="dept-gallery">
           <img src="img/huodong.jpg" alt="活动策划部活动展示" loading="lazy">
+          <img src="img/huodong2.jpg" alt="活动策划部安排的活动展示" loading="lazy">
         </div>
       </div>
     </details>
