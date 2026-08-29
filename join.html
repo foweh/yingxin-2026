@@ -373,6 +373,31 @@
   .dept-body .dept-closing{color:var(--green-800);font-weight:500;}
   .dept-body .dept-note{font-size:12.5px;color:var(--muted);}
 
+  /* ===== 作品展示图 ===== */
+  .dept-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .dept-gallery img{
+    flex:1 1 180px;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    border:1px solid var(--line);
+    box-shadow:0 8px 18px -12px rgba(20,56,42,.45);
+    background:var(--green-050);
+  }
+  .dept-gallery.single{justify-content:center;}
+  .dept-gallery.single img{
+    flex:0 1 auto;
+    width:auto;
+    height:auto;
+    max-height:340px;
+    max-width:100%;
+  }
+
   /* ===== 结尾 ===== */
   .end-msg{
     position:relative;
@@ -632,6 +657,9 @@
         </ul>
         <p>加入即可系统学习 PR、AE、AU 等软件，提升个人传媒实践能力。</p>
         <p class="dept-closing">想掌握视音频剪辑、开启你的创意之旅？那就别错过传媒编导部！</p>
+        <div class="dept-gallery single">
+          <img src="img/chuanmei.jpg" alt="传媒编导部作品展示" loading="lazy">
+        </div>
       </div>
     </details>
 
@@ -673,6 +701,9 @@
           <li>拿起相机捕捉风景的灵动、人物的鲜活、静物的雅致</li>
         </ul>
         <p class="dept-closing">加入文化设计部，用镜头定格每一个幸福时刻，用设计传递无限热爱！</p>
+        <div class="dept-gallery single">
+          <img src="img/sheji.jpg" alt="文化设计部设计作品" loading="lazy">
+        </div>
       </div>
     </details>
 
@@ -693,6 +724,9 @@
         </ul>
         <p>这里不仅是严谨有序的工作空间，更是充满欢声笑语的温暖集体——有耐心指导的学长学姐相伴，还有实用的专业技能培训助力成长。</p>
         <p class="dept-closing">易班秘书处期待你的加入，与我们一同"易"路同行，共赴成长！</p>
+        <div class="dept-gallery single">
+          <img src="img/mishuchu.png" alt="秘书处工作展示" loading="lazy">
+        </div>
       </div>
     </details>
 
@@ -714,6 +748,10 @@
         </ul>
         <p>在这里，你能站上舞台掌控全场，让青春在聚光灯下绽放光彩。</p>
         <p class="dept-closing">这是一个颜值与实力并存的部门，期待拥有最美声音的你加入这里！</p>
+        <div class="dept-gallery">
+          <img src="img/zhuchi1.jpg" alt="主持播音部活动展示 1" loading="lazy">
+          <img src="img/zhuchi2.jpg" alt="主持播音部活动展示 2" loading="lazy">
+        </div>
       </div>
     </details>
 
@@ -757,6 +795,11 @@
         </ul>
         <p>若你对 PR、AE、AU、C4D 等专业软件充满兴趣，渴望在实践中提升视频创作技术——</p>
         <p class="dept-closing">多媒体工作室绝对是你的不二之选！</p>
+        <div class="dept-gallery">
+          <img src="img/duomeiti1.jpg" alt="多媒体工作室作品 1" loading="lazy">
+          <img src="img/duomeiti2.jpg" alt="多媒体工作室作品 2" loading="lazy">
+          <img src="img/duomeiti3.jpg" alt="多媒体工作室作品 3" loading="lazy">
+        </div>
       </div>
     </details>
 
