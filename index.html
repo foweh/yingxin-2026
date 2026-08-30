@@ -512,6 +512,63 @@
   }
   .qa-link:hover{background:var(--green-500);transform:translateY(-1px);}
 
+  /* ===== 重要图片速览 ===== */
+  .pics{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:22px 24px 6px;
+    margin-bottom:30px;
+    box-shadow:0 14px 30px -22px rgba(20,56,42,.3);
+  }
+  .pics-head h2{
+    font-family:var(--serif);
+    font-size:20px;
+    font-weight:900;
+    color:var(--green-900);
+    margin-bottom:4px;
+  }
+  .pics-head p{
+    color:var(--muted);
+    font-size:13.5px;
+    margin-bottom:14px;
+  }
+  .pics-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-bottom:14px;
+  }
+  .pic-card{
+    flex:1 1 150px;
+    max-width:220px;
+    display:block;
+    text-decoration:none;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--card);
+    transition:transform .18s, box-shadow .18s;
+  }
+  .pic-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 28px -16px rgba(20,56,42,.5);
+  }
+  .pic-card img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+    display:block;
+  }
+  .pic-card span{
+    display:block;
+    font-size:12.5px;
+    color:var(--green-800);
+    font-weight:600;
+    padding:8px 10px;
+    line-height:1.5;
+  }
+
   /* 防骗提示 */
   .guard{
     margin-top:46px;
@@ -677,6 +734,37 @@
 
 <!-- ===== 主体 ===== -->
 <main class="main">
+
+  <!-- ===== 重要图片速览 ===== -->
+  <section class="pics">
+    <div class="pics-head">
+      <h2>📌 重要图片速览</h2>
+      <p>报到路线、校区地图、宿舍布局等实用图，点击查看大图~</p>
+    </div>
+    <div class="pics-grid">
+      <a class="pic-card" href="img/jiuzhan_yinxin.jpg" target="_blank" rel="noopener">
+        <img src="img/jiuzhan_yinxin.jpg" alt="九站校区迎新位置地图" loading="lazy">
+        <span>🚗 迎新位置地图 · 开车走南门</span>
+      </a>
+      <a class="pic-card" href="img/qinshi.png" target="_blank" rel="noopener">
+        <img src="img/qinshi.png" alt="四人寝和六人寝平面图" loading="lazy">
+        <span>🛏️ 四人/六人寝平面图</span>
+      </a>
+      <a class="pic-card" href="img/bedsize.jpg" target="_blank" rel="noopener">
+        <img src="img/bedsize.jpg" alt="九站校区各公寓床尺寸" loading="lazy">
+        <span>📏 九站公寓床尺寸</span>
+      </a>
+      <a class="pic-card" href="img/jiuzhan_map.png" target="_blank" rel="noopener">
+        <img src="img/jiuzhan_map.png" alt="九站校区地图" loading="lazy">
+        <span>🗺️ 九站校区地图</span>
+      </a>
+      <a class="pic-card" href="img/zuojia_map.jpg" target="_blank" rel="noopener">
+        <img src="img/zuojia_map.jpg" alt="左家校区地图" loading="lazy">
+        <span>🗺️ 左家校区地图</span>
+      </a>
+    </div>
+  </section>
+
   <div class="sec-head">
     <h2>高频问答</h2>
     <p>点击问题展开答案；支持关键词搜索与分类筛选。</p>
