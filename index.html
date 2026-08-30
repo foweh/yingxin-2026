@@ -477,6 +477,41 @@
     border-radius:999px;
   }
 
+  /* 问答附图 */
+  .qa-imgs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+  .qa-img{display:block;}
+  .qa-img img{
+    width:100%;
+    max-width:230px;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid var(--line);
+    transition:transform .16s, box-shadow .16s;
+  }
+  .qa-img:hover img{
+    transform:scale(1.03);
+    box-shadow:0 10px 22px -14px rgba(20,56,42,.5);
+  }
+  .qa-link{
+    display:inline-block;
+    margin-top:12px;
+    background:var(--green-600);
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    padding:9px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    transition:background .16s, transform .16s;
+  }
+  .qa-link:hover{background:var(--green-500);transform:translateY(-1px);}
+
   /* 防骗提示 */
   .guard{
     margin-top:46px;
@@ -713,7 +748,7 @@
     {c:"baodao", q:"可以提前到校报到、住宿舍吗？", a:"可以。9 月 4 号就能报到，报到后就可以去宿舍入住。报到入住后如果要外出，需要请假。如果提前更多天（如 9 月初）到校，宿舍能否入住以学校或辅导员通知为准。"},
     {c:"baodao", q:"报到当天最晚几点到？", a:"没有强制的最晚时间，但建议尽量白天到校。凌晨到达可能没有接站和办理人员，建议提前规划好行程。"},
     {c:"baodao", q:"报到需要带什么材料？", a:"带好身份证、录取通知书（需上交）、个人档案（报到当天交给导员）。户口本一般用不上，申请助学金等场景可能需要户口本复印件。具体以入学须知和学院通知为准。"},
-    {c:"baodao", q:"报到流程是怎样的？", a:"一般流程：到校后从南门进，在篮球场附近找到各学院及学团组织的迎新点，办理报到、领取宿舍钥匙、入住。报到当天会有学长学姐和志愿者引导，跟着流程走就行。"},
+    {c:"baodao", q:"报到流程是怎样的？", a:"一般流程：到校后从南门进，在篮球场附近找到各学院及学团组织的迎新点，办理报到、领取宿舍钥匙、入住。报到当天会有学长学姐和志愿者引导，跟着流程走就行。", imgs:["img/jiuzhan_yinxin.jpg"]},
     {c:"baodao", q:"报到当天家长能进校吗？能吃饭吗？", a:"报到当天家长可以陪同入校，可以在校内食堂吃个午饭，迎新期间学校对家长比较友好。"},
     {c:"baodao", q:"报到后还能出校吗？", a:"报到入住后就算入校状态了，临时外出一般需要请假，报到当天晚上如果不住宿舍，最好先跟辅导员请个假。"},
     {c:"baodao", q:"新生报到要带户口本吗？", a:"一般不需要带户口本原件。只有申请助学金、贫困认定等场景才可能需要户口本复印件，按需准备即可。"},
@@ -743,13 +778,13 @@
     {c:"sushe", q:"大一能带电脑吗？需要买吗？", a:"可以带电脑，没有限制。但第一学期大部分专业用不到电脑，学校有机房，可以观察需求后再决定要不要买。"},
     {c:"sushe", q:"宿舍柜子能放下 26 寸行李箱吗？", a:"一般可以，具体看所分公寓的柜子规格。大件行李也可以考虑放床下或柜顶，到宿舍看实际情况安排。"},
     {c:"sushe", q:"宿舍能插网线吗？有网吗？", a:"宿舍一般可以连校园网，网络开通多与校园卡/运营商套餐相关，开学后按需要办理即可。"},
-    {c:"sushe", q:"怎么查询自己分到的宿舍？", a:"通过缴费平台 / e服务（微公寓）查询：点内部登录，账号是学号，密码统一为 Jlnku@2026!（感叹号也是密码的一部分，别漏掉）。在「住宿信息」里查看寝室，不在「我的查寝」里找。"},
+    {c:"sushe", q:"怎么查询自己分到的宿舍？", a:"通过缴费平台 / e服务（微公寓）查询：点内部登录，账号是学号，密码统一为 Jlnku@2026!（感叹号也是密码的一部分，别漏掉）。在「住宿信息」里查看寝室，不在「我的查寝」里找。", link:"https://mp.weixin.qq.com/s/W-p49onmOKOPt3dVhpl4pA", linkText:"新生寝室信息一览｜2026级床位查询及公寓报到完整流程"},
     {c:"sushe", q:"查宿舍的账号登不上或锁定了怎么办？", a:"登录次数过多会暂时锁定：等半小时或第二天再试即可，持续锁定可联系群管理员。学号（2026 开头 11 位）可以在缴费平台上查到。"},
     {c:"sushe", q:"床位号怎么分上下铺？", a:"一般床位号单号是上铺、双号是下铺。想换床位需要上报反映，经学院同意后调整。"},
-    {c:"sushe", q:"宿舍是几人间？", a:"九站校区男生除十一公寓外基本是 6 人寝；女生四人寝只有 7、8 公寓。四人寝基本满员，一般不能申请。"},
+    {c:"sushe", q:"宿舍是几人间？", a:"九站校区男生除十一公寓外基本是 6 人寝；女生四人寝只有 7、8 公寓。四人寝基本满员，一般不能申请。", imgs:["img/qinshi.png"]},
     {c:"sushe", q:"宿舍有插座吗？能装床帘吗？", a:"上下铺都有插座（插孔）。大一不能用床帘 / 蚊帐，大二可以；专升本可以用。床上桌可以装，墙上可以挂置物架，也可以买小衣架。"},
     {c:"sushe", q:"宿舍水电怎么算？", a:"电费自己交，水费各管各的；楼内有热水房，热水不用办卡。"},
-    {c:"sushe", q:"床铺尺寸多大？", a:"床铺规格多为 0.9×1.9 米，部分公寓（如左家校区部分公寓）为 0.9×2.0 米，买床垫前建议先确认自己公寓的实际尺寸。"},
+    {c:"sushe", q:"床铺尺寸多大？", a:"床铺规格多为 0.9×1.9 米，部分公寓（如左家校区部分公寓）为 0.9×2.0 米，买床垫前建议先确认自己公寓的实际尺寸。", imgs:["img/bedsize.jpg"]},
     {c:"chuangshang", q:"床上用品必须买学校统一的吗？", a:"不是必须。可以自己带、网上买，也可以买学校统一渠道的（入学须知上有二维码）。军训期间一般要求内务统一，具体以通知为准。"},
     {c:"chuangshang", q:"学校的被子怎么样？买多厚的？", a:"宿舍楼内有售卖点可以挑选。被子买 4 斤左右就够，寝室暖气足，冬天不会冷。"},
     {c:"chuangshang", q:"床垫买什么材质好？", a:"学校自带军绿色硬垫，想更舒适可以加购记忆棉、乳胶或棉垫，看个人睡眠习惯选择，没有统一标准。"},
@@ -780,7 +815,7 @@
     {c:"dangan", q:"团组织关系可以开学后到学校再转吗？", a:"可以，团组织关系可以开学之后到学校再转，不着急。转团关系找不到学校团支部的话，问辅导员，转到自己学院的新生团支部即可。"},
     {c:"jiaotong", q:"坐火车到哪个站？学校有接站吗？", a:"买到「吉林站」（吉林市），报到期间吉林站有学校接站车送到学校。不建议买到长春站（无接站）。长春到吉林车次很多，很方便。"},
     {c:"jiaotong", q:"凌晨到校会有接站吗？", a:"凌晨到达可能没有接站和办理人员，建议尽量白天到校，提前规划好行程。"},
-    {c:"jiaotong", q:"九站和左家两个校区怎么分？", a:"学校有九站校区和左家校区，按专业/学院划分，具体以录取通知和学校安排为准。九站离市区近，左家偏郊区。"},
+    {c:"jiaotong", q:"九站和左家两个校区怎么分？", a:"学校有九站校区和左家校区，按专业/学院划分，具体以录取通知和学校安排为准。九站离市区近，左家偏郊区。", imgs:["img/jiuzhan_map.png","img/zuojia_map.jpg","img/zuojia_map2.jpg","img/zuojia_map3.jpg"]},
     {c:"jiaotong", q:"左家校区怎么去市区？", a:"左家校区去市区一般是打车或坐客车，距离较远。左家再怎么说也还是吉林市，周末出行提前规划好时间。"},
     {c:"jiaotong", q:"报到当天车能开进学校吗？", a:"学生车辆入校一般需要提前和辅导员沟通、门卫登记后放行。校外停车位比较紧张，建议提前安排。"},
     {c:"jiaotong", q:"快递地址写哪里？取件方便吗？", a:"各校区都有快递驿站，具体地址以学院通知/驿站信息为准，收件人写自己姓名。取件一般需出示拼多多身份码。"},
@@ -858,7 +893,18 @@
         var it = items[j];
         html += '<div class="qa" data-cat="'+cat.id+'" data-q="'+escapeHtml(it.q)+'" data-a="'+escapeHtml(it.a)+'">';
         html += '<button class="qa-q" type="button"><span class="q-mark">问</span><span class="q-text">'+escapeHtml(it.q)+'</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>';
-        html += '<div class="qa-a-wrap"><div class="qa-a"><p>'+escapeHtml(it.a)+'</p><span class="tag">分类：'+cat.name+'</span></div></div>';
+        html += '<div class="qa-a-wrap"><div class="qa-a"><p>'+escapeHtml(it.a)+'</p>';
+        if(it.imgs){
+          html += '<div class="qa-imgs">';
+          for(var m=0;m<it.imgs.length;m++){
+            html += '<a class="qa-img" href="'+it.imgs[m]+'" target="_blank" rel="noopener"><img src="'+it.imgs[m]+'" alt="相关图片" loading="lazy"></a>';
+          }
+          html += '</div>';
+        }
+        if(it.link){
+          html += '<a class="qa-link" href="'+escapeHtml(it.link)+'" target="_blank" rel="noopener">🔗 '+escapeHtml(it.linkText || "查看详情")+'</a>';
+        }
+        html += '<span class="tag">分类：'+cat.name+'</span></div></div>';
         html += '</div>';
       }
       html += '</div></section>';
