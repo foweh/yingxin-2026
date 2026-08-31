@@ -138,6 +138,15 @@
     color:#E7F2EC;
   }
   .hero-cta.ghost:hover{background:rgba(255,255,255,.2);}
+  .hero-cta.qr{
+    background:linear-gradient(120deg,#3E946F,#2F7D5B);
+    border:1px solid rgba(255,255,255,.4);
+    color:#fff;
+    cursor:pointer;
+    font-family:var(--sans);
+    box-shadow:0 10px 26px -8px rgba(46,125,91,.8);
+  }
+  .hero-cta.qr:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 30px -8px rgba(46,125,91,.95);}
 
   /* ===== 主体 ===== */
   main{
@@ -679,6 +688,7 @@
     <p class="sub">校易班学生工作站纳新啦，快来成为"易"家人~<br>8 个部门各具精彩，总有一个适合你。</p>
     <div class="ctas">
       <a class="hero-cta primary" href="#depts">🎉 加入我们易班！</a>
+      <button class="hero-cta qr" id="qqGroupQrBtn" title="点击查看校易班纳新群二维码">💬 扫码进纳新群</button>
       <a class="hero-cta ghost" href="#about">先看看易班 ↓</a>
     </div>
   </div>
@@ -1007,13 +1017,25 @@
     lb.classList.remove("show");
     document.body.style.overflow = "";
   }
+  function openLightbox(src){
+    lbImg.setAttribute("src", src);
+    lb.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
   document.querySelectorAll(".dept-gallery img").forEach(function(img){
     img.addEventListener("click", function(){
-      lbImg.setAttribute("src", img.getAttribute("src"));
-      lb.classList.add("show");
-      document.body.style.overflow = "hidden";
+      openLightbox(img.getAttribute("src"));
     });
   });
+
+  /* ===== 纳新群二维码（弹出大图预览） ===== */
+  var qqQrBtn = document.getElementById("qqGroupQrBtn");
+  if(qqQrBtn){
+    qqQrBtn.addEventListener("click", function(){
+      openLightbox("img/qq_group_qr.jpg");
+    });
+  }
+
   lb.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
   lb.addEventListener("click", function(e){
     if(e.target === lb) closeLightbox();
