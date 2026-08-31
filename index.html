@@ -112,31 +112,52 @@
     letter-spacing:.04em;
   }
 
-  /* 纳新群二维码按钮（hero 醒目位置） */
-  .hero-qr-btn{
+  /* 纳新群二维码卡片（hero 醒目位置） */
+  .hero-qr{
     display:inline-flex;
     align-items:center;
-    gap:8px;
+    gap:16px;
     margin-top:26px;
-    padding:13px 30px;
-    border:none;
-    border-radius:999px;
-    background:linear-gradient(120deg,var(--orange),#F0A34F);
-    color:#fff;
-    font-family:var(--sans);
-    font-size:16px;
-    font-weight:700;
-    letter-spacing:.08em;
-    cursor:pointer;
-    box-shadow:0 10px 26px -8px rgba(224,138,46,.75);
-    transition:transform .18s, box-shadow .18s;
+    padding:12px 22px 12px 12px;
+    border-radius:18px;
+    background:rgba(255,255,255,.14);
+    backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.35);
+    cursor:zoom-in;
+    transition:transform .18s, background .18s, box-shadow .18s;
     animation:pulse 2.6s ease-in-out infinite;
   }
-  @keyframes pulse{
-    0%,100%{box-shadow:0 10px 30px -8px rgba(224,138,46,.8);}
-    50%{box-shadow:0 10px 44px -4px rgba(224,138,46,.98);}
+  .hero-qr:hover{
+    transform:translateY(-3px) scale(1.02);
+    background:rgba(255,255,255,.22);
   }
-  .hero-qr-btn:hover{transform:translateY(-3px) scale(1.03);}
+  .hero-qr img{
+    width:86px;
+    height:86px;
+    border-radius:12px;
+    background:#fff;
+    object-fit:cover;
+    box-shadow:0 6px 16px -6px rgba(0,0,0,.5);
+  }
+  .hero-qr-txt{text-align:left;}
+  .hero-qr-txt b{
+    display:block;
+    font-family:var(--sans);
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:.05em;
+    color:#fff;
+    margin-bottom:4px;
+  }
+  .hero-qr-txt span{
+    display:block;
+    font-size:12.5px;
+    color:#D6E7DD;
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 10px 30px -8px rgba(224,138,46,.55);}
+    50%{box-shadow:0 10px 44px -4px rgba(224,138,46,.85);}
+  }
 
   /* ===== 时间轴 ===== */
   .timeline-wrap{
@@ -747,7 +768,13 @@
       <div class="stat"><b>约150元</b><span>军训服一套</span></div>
       <div class="stat"><b>2–4元</b><span>洗一次澡</span></div>
     </div>
-    <button class="hero-qr-btn" id="heroQrBtn" type="button" title="点击查看校易班纳新群二维码">💬 扫码加入校易班纳新群</button>
+    <div class="hero-qr" id="heroQr" title="点击查看大图">
+      <img src="img/qq_group_qr.jpg" alt="校易班纳新群二维码">
+      <div class="hero-qr-txt">
+        <b>💬 扫码加入校易班纳新群</b>
+        <span>QQ 扫码进群 · 学长学姐在线答疑</span>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -1169,9 +1196,9 @@
     });
   });
   // hero 纳新群二维码 → 弹出大图预览
-  var heroQrBtn = document.getElementById("heroQrBtn");
-  if(heroQrBtn){
-    heroQrBtn.addEventListener("click", function(){
+  var heroQr = document.getElementById("heroQr");
+  if(heroQr){
+    heroQr.addEventListener("click", function(){
       openLightbox("img/qq_group_qr.jpg");
     });
   }
